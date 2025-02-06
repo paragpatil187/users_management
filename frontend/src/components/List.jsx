@@ -6,8 +6,8 @@ const List = () => {
   const [userData, setUserData] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
   const [modalType, setModalType] = useState("");
-  // const BASE_URL = "http://localhost/users_management/backend/api/";
-  const BASE_URL = "https://user--management.rf.gd/backend/api/";
+    const BASE_URL = "http://localhost/users_management/backend/api/";
+    // const BASE_URL = "https://user--management.rf.gd/backend/api/";
 
   // Fetch all users
   useEffect(() => {
@@ -18,10 +18,10 @@ const List = () => {
   const fetchUsers = () => {
     axios
       .get(`${BASE_URL}get_all_user.php`, {
-        headers: {
-          'Content-Type': 'application/json', // Ensure that the content type is set correctly
-          'Access-Control-Allow-Origin': '*', // Allow cross-origin requests (ensure this is handled in the backend too)
-        }
+        // headers: {
+        //   'Content-Type': 'application/json', // Ensure that the content type is set correctly
+        //   // 'Access-Control-Allow-Origin': 'http:localhost:3000/', // Allow cross-origin requests (ensure this is handled in the backend too)
+        // }
       })
       .then((response) => {
         setUserData(response.data.users);
@@ -53,10 +53,10 @@ const List = () => {
 
     axios
       .post(`${BASE_URL}create_user.php`, newUser, {
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-        }
+        // headers: {
+        //   'Content-Type': 'application/json',
+        //   'Access-Control-Allow-Origin': '*',
+        // }
       })
       .then(() => {
         fetchUsers();
@@ -80,10 +80,10 @@ const List = () => {
 
     axios
       .post(`${BASE_URL}update_user.php`, updatedUser, {
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-        }
+        // headers: {
+        //   'Content-Type': 'application/json',
+        //   'Access-Control-Allow-Origin': '*',
+        // }
       })
       .then(() => {
         fetchUsers();
@@ -98,10 +98,10 @@ const List = () => {
   const handleDelete = () => {
     axios
       .post(`${BASE_URL}delete_user.php`, { id: selectedUser.id }, {
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-        }
+        // headers: {
+        //   'Content-Type': 'application/json',
+        //   'Access-Control-Allow-Origin': '*',
+        // }
       })
       .then(() => {
         fetchUsers();
