@@ -20,7 +20,7 @@ const List = () => {
       .get(`${BASE_URL}get_all_user.php`, {
         headers: {
           'Content-Type': 'application/json', // Ensure that the content type is set correctly
-          'Access-Control-Allow-Origin': 'localhost:3000', // Allow cross-origin requests (ensure this is handled in the backend too)
+          'Access-Control-Allow-Origin': '*', // Allow cross-origin requests (ensure this is handled in the backend too)
         }
       })
       .then((response) => {
