@@ -2,11 +2,18 @@
 
 class Core
 {
-    const BASE_URL = 'http://localhost/user_management_php/api/';
-    const DB_NAME = "user_crud";
-    const DB_PASS = "";
-    const DB_HOST = "localhost";
-    const DB_USER = "root";
+    // const BASE_URL = 'http://localhost/user_management_php/api/';
+    // const DB_NAME = "user_crud";
+    // const DB_PASS = "";
+    // const DB_HOST = "localhost";
+    // const DB_USER = "root";
+
+
+    const BASE_URL = 'https://user--management.rf.gdapi/backend/api/';
+    const DB_NAME = "if0_37851430_user_crud";
+    const DB_PASS = "aPmImU9LTj";
+    const DB_HOST = "sql101.infinityfree.com";
+    const DB_USER = "if0_37851430";
     
     private $base_url;
     function __construct()
